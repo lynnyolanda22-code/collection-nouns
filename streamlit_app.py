@@ -31,10 +31,13 @@ with col1:
     """)
     
     # 嵌入推箱子游戏
-    with open("index.html", "r", encoding="utf-8") as f:
-        html_content = f.read()
-    
-    components.html(html_content, height=600, scrolling=True)
+    try:
+        with open("index.html", "r", encoding="utf-8") as f:
+            html_content = f.read()
+        components.html(html_content, height=600, scrolling=True)
+    except FileNotFoundError:
+        st.error("推箱子游戏文件未找到，请确保index.html文件存在")
+        st.info("您可以直接访问GitHub Pages获得最佳游戏体验：https://lynnyolanda22-code.github.io/collection-nouns/")
 
 with col2:
     st.header("🍄 Super Mario Bros")
@@ -54,10 +57,13 @@ with col2:
     """)
     
     # 嵌入Super Mario游戏
-    with open("super-mario-game/index.html", "r", encoding="utf-8") as f:
-        mario_html = f.read()
-    
-    components.html(mario_html, height=600, scrolling=True)
+    try:
+        with open("super-mario-game/index.html", "r", encoding="utf-8") as f:
+            mario_html = f.read()
+        components.html(mario_html, height=600, scrolling=True)
+    except FileNotFoundError:
+        st.error("Super Mario游戏文件未找到，请确保super-mario-game/index.html文件存在")
+        st.info("您可以直接访问GitHub Pages获得最佳游戏体验：https://lynnyolanda22-code.github.io/collection-nouns/super-mario-game/")
 
 # 侧边栏信息
 with st.sidebar:
