@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Bros - Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #game {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #333;
+            background-color: #1a1a1a;
+        }
+        .info {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍄 Super Mario Bros - 测试页面</h1>
+    
+    <div class="info">
+        <h3>游戏控制：</h3>
+        <p><strong>A键</strong> - 向左移动 | <strong>D键</strong> - 向右移动</p>
+        <p><strong>空格键</strong> - 跳跃 | <strong>S键</strong> - 蹲下 | <strong>Q键</strong> - 开火</p>
+    </div>
+    
+    <div id="game">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100%; flex-direction: column;">
+            <h2>🎮 游戏加载中...</h2>
+            <p>如果游戏没有显示，请检查浏览器控制台是否有错误</p>
+            <p>按 F12 打开开发者工具查看错误信息</p>
+        </div>
+    </div>
+    
+    <div class="info">
+        <h3>故障排除：</h3>
+        <p>1. 确保所有资源文件都在正确位置</p>
+        <p>2. 检查浏览器控制台是否有JavaScript错误</p>
+        <p>3. 确保网络连接正常（游戏需要加载外部资源）</p>
+    </div>
+
+    <!-- 加载Phaser.js -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    
+    <!-- 加载游戏脚本 -->
+    <script src="javascript/game.js"></script>
+    <script src="javascript/game/animations.js"></script>
+    <script src="javascript/game/blocks.js"></script>
+    <script src="javascript/game/strucutres.js"></script>
+    <script src="javascript/game/settings.js"></script>
+    <script src="javascript/game/fireball.js"></script>
+    <script src="javascript/game/player-control.js"></script>
+    <script src="javascript/game/hud-control.js"></script>
+    <script src="javascript/game/entities-control.js"></script>
+    <script src="javascript/helpers/screenshot.js"></script>
+    <script src="javascript/helpers/window-title.js"></script>
+</body>
+</html>
