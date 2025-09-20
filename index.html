@@ -1,51 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr Box - 推箱子游戏</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="game-container">
-        <header>
-            <h1>Mr Box - 推箱子游戏</h1>
-            <div class="game-info">
-                <span>关卡: <span id="level">1</span></span>
-                <span>步数: <span id="moves">0</span></span>
-                <button id="reset-btn">重新开始</button>
-            </div>
-        </header>
-        
-        <div class="game-board" id="gameBoard">
-            <!-- 游戏网格将通过JavaScript动态生成 -->
-        </div>
-        
-        <div class="controls">
-            <p>使用方向键移动Mr Box</p>
-            <p>将箱子推到目标位置(红色区域)</p>
-        </div>
-        
-        <div class="level-selector">
-            <h3>选择关卡:</h3>
-            <div class="level-buttons" id="levelButtons">
-                <!-- 关卡按钮将通过JavaScript生成 -->
-            </div>
-        </div>
+    <title>Super Mario Phaser</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link rel="preload" href="assets/others/loading.gif" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </head>
+  <body>
+    <div id="game">
+      <img id="gif" src="assets/others/loading.gif" alt="Loading animation" class="loading-gif">
+      <img id="gif-shadow" src="assets/others/loading.gif" alt="Loading animation shadow" class="loading-gif">
     </div>
-    
-    <div class="modal" id="victoryModal">
-        <div class="modal-content">
-            <h2>恭喜通关！</h2>
-            <p>你完成了第 <span id="victoryLevel"></span> 关！</p>
-            <p>总步数: <span id="victoryMoves"></span></p>
-            <button id="nextLevelBtn">下一关</button>
-            <button id="closeModalBtn">关闭</button>
+
+    <noscript>
+      <div class="blurbg">
+        <div class="alertpopup">
+          <h2>JavaScript disabled!</h2>
+          <hr>
+          <p>This website uses JavaScript to work, otherwise the game will not load.</p>
+          <p>Enable or stop blocking JavaScript and try again.</p>
         </div>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+      </div>
+    </noscript>
+
+    <script src="./javascript/game.js" type="text/javascript"></script><script src="./javascript/game/animations.js" type="text/javascript"></script><script src="./javascript/game/blocks.js" type="text/javascript"></script><script src="./javascript/game/strucutres.js" type="text/javascript"></script><script src="./javascript/game/settings.js" type="text/javascript"></script><script src="./javascript/game/fireball.js" type="text/javascript"></script><script src="./javascript/game/player-control.js" type="text/javascript"></script><script src="./javascript/game/hud-control.js" type="text/javascript"></script><script src="./javascript/game/entities-control.js" type="text/javascript"></script><script src="./javascript/helpers/screenshot.js" type="text/javascript"></script><script src="./javascript/helpers/window-title.js" type="text/javascript"></script>
+  </body>
 </html>
-
-
