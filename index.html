@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Box - 推箱子游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Mr Box - 推箱子游戏</h1>
+            <div class="game-info">
+                <span>关卡: <span id="level">1</span></span>
+                <span>步数: <span id="moves">0</span></span>
+                <button id="reset-btn">重新开始</button>
+            </div>
+        </header>
+        
+        <div class="game-board" id="gameBoard">
+            <!-- 游戏网格将通过JavaScript动态生成 -->
+        </div>
+        
+        <div class="controls">
+            <p>使用方向键移动Mr Box</p>
+            <p>将箱子推到目标位置(红色区域)</p>
+        </div>
+        
+        <div class="level-selector">
+            <h3>选择关卡:</h3>
+            <div class="level-buttons" id="levelButtons">
+                <!-- 关卡按钮将通过JavaScript生成 -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="victoryModal">
+        <div class="modal-content">
+            <h2>恭喜通关！</h2>
+            <p>你完成了第 <span id="victoryLevel"></span> 关！</p>
+            <p>总步数: <span id="victoryMoves"></span></p>
+            <button id="nextLevelBtn">下一关</button>
+            <button id="closeModalBtn">关闭</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
